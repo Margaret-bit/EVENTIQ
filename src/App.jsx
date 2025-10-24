@@ -1,3 +1,4 @@
+
 // import React from "react";
 import LandingPage from "./Components/Pages/LandingPage.jsx";
 import SignupHallOwner from "./Components/auth/SignupHallOwner.Jsx";
@@ -11,9 +12,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 const App = () => {
-
-
-
   
   return <div>
 
@@ -33,7 +31,9 @@ const App = () => {
 
     {/* <LandingPage/> */}
     {/* <SignupHallOwner/> */}
-  </div>;
-};
+  </div>
 
-export default App;
+  
+
+  }
+export default App
