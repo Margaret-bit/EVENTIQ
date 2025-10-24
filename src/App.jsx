@@ -7,6 +7,7 @@ import Outdoor from "./Components/Outdoor";
 import Rooftop from "./Components/Rooftop";
 import Multipurpose from "./Components/Multipurpose";
 import Marquee from "./Components/Marquee";
+import EventigDashboard from "./Components/EventigDashboard";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="rooftop" element={<Rooftop />} />
             <Route path="multipurpose" element={<Multipurpose />} />
             <Route path="marquee" element={<Marquee />} />
+            <Route path="eventiq-dasboard" element={<EventigDashboard />} />
           </Route>
         </Routes>
       </HashRouter>
