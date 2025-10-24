@@ -1,39 +1,30 @@
-
-// import React from "react";
-import LandingPage from "./Components/Pages/LandingPage.jsx";
-import SignupHallOwner from "./Components/auth/SignupHallOwner.Jsx";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import SignUpDropdown from './components/SignUpDropdown';
-// import IndividualSignup from './pages/IndividualSignup';
-// import SignupHallOwner from './pages/SignupHallOwner';
-// import Login from './pages/Login';
-
-
-
+import React from "react";
+import UserDashboard from "./Components/UserDashboard";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Allvenues from "./Components/Allvenue";
+import Indoorhall from "./Components/Indoorhall";
+import Outdoor from "./Components/Outdoor";
+import Rooftop from "./Components/Rooftop";
+import Multipurpose from "./Components/Multipurpose";
+import Marquee from "./Components/Marquee";
 
 const App = () => {
-  
-  return <div>
-
-    <Router>
-      <div className="App">
-       
-
-        
+  return (
+    <div>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          {/* <Route path="/signup/individual" element={<IndividualSignup />} /> */}
-          <Route path="/signup-hallowner" element={<SignupHallOwner />} />
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/" element={<UserDashboard />}>
+            <Route path="" element={<Allvenues />} />
+            <Route path="indoorhall" element={<Indoorhall />} />
+            <Route path="outdoor" element={<Outdoor />} />
+            <Route path="rooftop" element={<Rooftop />} />
+            <Route path="multipurpose" element={<Multipurpose />} />
+            <Route path="marquee" element={<Marquee />} />
+          </Route>
         </Routes>
-      </div>
-    </Router>
+      </HashRouter>
+    </div>
+  );
+};
 
-    {/* <LandingPage/> */}
-    {/* <SignupHallOwner/> */}
-  </div>
-
-  
-
-  }
-export default App
+export default App;
